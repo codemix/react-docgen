@@ -33,7 +33,6 @@ exports['default'] = function (documentation, propertyPath) {
   var propDescriptor = documentation.getPropDescriptor(propName);
 
   if (propDescriptor.description) {
-    console.warn('Description of prop \'' + propName + '\' already set. Don\'t mix propTypes and flow in one single component.');
     return;
   }
 

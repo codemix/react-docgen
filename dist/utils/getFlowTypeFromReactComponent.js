@@ -82,12 +82,7 @@ exports['default'] = function (path) {
 
   if (typePath && types.GenericTypeAnnotation.check(typePath.node)) {
     typePath = (0, _utilsResolveToValue2['default'])(typePath.get('id'));
-    if (!typePath || types.Identifier.check(typePath.node)) {
-      return;
-    }
-
-    if ((0, _utilsIsUnreachableFlowType2['default'])(typePath)) {
-      console.warn('Imported/required types can not be resolved'); // eslint-disable-line no-console
+    if (!typePath || types.Identifier.check(typePath.node) || (0, _utilsIsUnreachableFlowType2['default'])(typePath)) {
       return;
     }
 

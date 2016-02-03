@@ -30,17 +30,25 @@ var _getClassMemberValuePath = require('./getClassMemberValuePath');
 
 exports.getClassMemberValuePath = _interopRequire(_getClassMemberValuePath);
 
+var _getFlowType = require('./getFlowType');
+
+exports.getFlowType = _interopRequire(_getFlowType);
+
+var _getFlowTypeFromReactComponent = require('./getFlowTypeFromReactComponent');
+
+exports.getFlowTypeFromReactComponent = _interopRequire(_getFlowTypeFromReactComponent);
+
 var _getMemberExpressionRoot = require('./getMemberExpressionRoot');
 
 exports.getMemberExpressionRoot = _interopRequire(_getMemberExpressionRoot);
 
-var _getMembers = require('./getMembers');
-
-exports.getMembers = _interopRequire(_getMembers);
-
 var _getMemberValuePath = require('./getMemberValuePath');
 
 exports.getMemberValuePath = _interopRequire(_getMemberValuePath);
+
+var _getMembers = require('./getMembers');
+
+exports.getMembers = _interopRequire(_getMembers);
 
 var _getNameOrValue = require('./getNameOrValue');
 
@@ -58,6 +66,10 @@ var _getPropType = require('./getPropType');
 
 exports.getPropType = _interopRequire(_getPropType);
 
+var _getTypeAnnotation = require('./getTypeAnnotation');
+
+exports.getTypeAnnotation = _interopRequire(_getTypeAnnotation);
+
 var _isExportsOrModuleAssignment = require('./isExportsOrModuleAssignment');
 
 exports.isExportsOrModuleAssignment = _interopRequire(_isExportsOrModuleAssignment);
@@ -73,6 +85,10 @@ exports.isReactCreateClassCall = _interopRequire(_isReactCreateClassCall);
 var _isReactModuleName = require('./isReactModuleName');
 
 exports.isReactModuleName = _interopRequire(_isReactModuleName);
+
+var _isStatelessComponent = require('./isStatelessComponent');
+
+exports.isStatelessComponent = _interopRequire(_isStatelessComponent);
 
 var _match = require('./match');
 
