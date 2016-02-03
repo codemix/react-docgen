@@ -50,12 +50,11 @@ export default (path: NodePath): ?NodePath  => {
 
   if (typePath && types.GenericTypeAnnotation.check(typePath.node)) {
     typePath = resolveToValue(typePath.get('id'));
-    if (!typePath || types.Identifier.check(typePath.node)) {
-      return;
-    }
-
-    if (isUnreachableFlowType(typePath)) {
-      console.warn('Imported/required types can not be resolved'); // eslint-disable-line no-console
+    if (
+      !typePath || 
+      types.Identifier.check(typePath.node) ||
+      isUnreachableFlowType(typePath)
+    ) {
       return;
     }
 

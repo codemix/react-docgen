@@ -246,12 +246,12 @@ we are getting this output:
   "description":"General component description.",
   "props":{
     "primitive":{
-      "type":{ "name":"number" },
+      "flowType":{ "name":"number" },
       "required":true,
       "description":"Description of prop \"foo\"."
     },
     "literalsAndUnion":{
-      "type":{
+      "flowType":{
         "name":"union",
         "raw":"'string' | 'otherstring' | number",
         "elements":[
@@ -264,7 +264,7 @@ we are getting this output:
       "description":"Description of prop \"bar\"."
     },
     "arr":{
-      "type":{
+      "flowType":{
         "name":"Array",
         "elements":[
           { "name":"any" }
@@ -274,7 +274,7 @@ we are getting this output:
       "required":true
     },
     "func":{
-      "type":{
+      "flowType":{
         "name":"signature",
         "type":"function",
         "raw":"(value: string) => void",
@@ -288,7 +288,7 @@ we are getting this output:
       "required":false
     },
     "obj":{
-      "type":{
+      "flowType":{
         "name":"signature",
         "type":"object",
         "raw":"{ subvalue: ?boolean }",
